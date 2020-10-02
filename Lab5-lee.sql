@@ -68,4 +68,4 @@ from People
 where pid in (select pid
 			  from Customers)
 	or pid in (select pid
-				from Agents);
+				from Agents); 
