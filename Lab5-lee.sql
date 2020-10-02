@@ -22,9 +22,9 @@ where pid in (select pid
 
 /* question 5 */
 select firstName
-from People p
-inner join Customers c on (p.pid = c.pid)
-left outer join Orders o on (p.pid = o.custId);
+from People p inner join Customers c on (p.pid = c.pid)
+	left outer join orders o on (p.pid = o.custId)
+	where o.prodId is NULL;
 
 /* question 6 */
 select pid, commissionPct
