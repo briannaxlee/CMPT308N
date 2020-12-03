@@ -99,7 +99,8 @@ end;
 $$ 
 language plpgsql;
 
-select PreReqsFor(449, 'results');
+/* can change 308 to any of the other classes */
+select PreReqsFor(308, 'results');
 Fetch all from results;
 
 create or replace function IsPreReqFor(int, REFCURSOR) returns refcursor as $$
@@ -116,5 +117,6 @@ end;
 $$ 
 language plpgsql;
 
+/* can change 221 to any of the other classes */
 select IsPreReqsFor(221, 'results');
 Fetch all from results;
